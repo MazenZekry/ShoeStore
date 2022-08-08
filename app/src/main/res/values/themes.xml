@@ -4,6 +4,6 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/darkturquoise</item>
         <item name="colorPrimaryVariant">@color/darkturquoise</item>
-        <item name="colorOnPrimary">@color/slateblue</item>
+        <item name="colorOnPrimary">@color/purple</item>
     </style>
 </resources>

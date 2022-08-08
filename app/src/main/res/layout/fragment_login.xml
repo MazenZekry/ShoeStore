@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+    <variable
+        name="user"
+        type="com.mazen.shoestore.model.User" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/lavender"
-        tools:context=".LoginFragment"
+        tools:context=".fragment.LoginFragment"
         >
 
         <com.google.android.material.textfield.TextInputLayout
@@ -44,7 +46,7 @@
             android:theme="@style/MyTextInputLayoutOutLinedBox"
             android:padding="@dimen/_5sdp"
             app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/darkturquoise"
+            app:passwordToggleTint="@color/purple"
             app:startIconDrawable="@drawable/ic_baseline_password_24"
             app:startIconTint="@color/darkturquoise"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
@@ -64,7 +66,6 @@
             app:layout_constraintTop_toBottomOf="@id/textInputLayout_password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:cornerRadius="@dimen/_10sdp"
             style="@style/button_style" />
 
         <TextView
@@ -72,14 +73,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/large_margin"
-            android:text="Don't have an account ?"
+            android:text="Don't have an account?"
             android:textSize="@dimen/text_view_size"
             android:textStyle="bold"
             android:fontFamily="@font/roboto"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.03"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintHorizontal_bias="0.35"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_sign_in" />
 
@@ -89,10 +90,10 @@
             android:layout_height="wrap_content"
             android:text="@string/sign_up"
             android:textSize="@dimen/text_view_size"
-            android:textColor="@color/slateblue"
+            android:textColor="@color/purple"
             android:textStyle="bold"
             android:fontFamily="@font/roboto"
-            android:layout_marginEnd="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/_22sdp"
             app:layout_constraintBottom_toBottomOf="@+id/textView2"
             app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintEnd_toEndOf="parent"
