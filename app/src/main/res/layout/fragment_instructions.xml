@@ -10,22 +10,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/lavender"
         tools:context=".instructions.InstructionsFragment">
 
         <TextView
             android:id="@+id/instructions_header"
-            style="@style/text_view_style"
+            style="@style/header_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/large_margin"
             android:text="@string/instructions_header"
-            android:textAlignment="center"
-            android:textColor="@color/purple"
-            android:textSize="@dimen/title_size"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView

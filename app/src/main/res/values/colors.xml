@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="lavender">#dbf1f9</color>
-    <color name="darkturquoise">#0dd7df</color>
-    <color name="paleturquoise">#afebf3</color>
+    <color name="orange">#F3B24E</color>
     <color name="purple">#7e53c5</color>
+    <color name="darkpurple">#7d45a0</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
