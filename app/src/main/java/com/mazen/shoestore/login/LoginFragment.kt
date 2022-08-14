@@ -3,6 +3,7 @@ package com.mazen.shoestore.login
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -27,7 +28,12 @@ class LoginFragment : Fragment() {
                 view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
             }
         }
+        setHasOptionsMenu(true)
         return binding.root
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu) {
+        menu.clear()
     }
 
     private fun validate(): Boolean {
