@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/large_margin"
             android:fontFamily="@font/roboto"
             android:text="@string/login_header"
             android:textAlignment="center"
@@ -74,7 +74,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_sign_in"
             style="@style/button_style"
-            android:layout_width="@dimen/_180sdp"
+            android:layout_width="@dimen/_190sdp"
             android:layout_height="@dimen/_55sdp"
             android:text="@string/sign_in"
             app:layout_constraintEnd_toEndOf="parent"
@@ -98,9 +98,9 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_sign_up"
             style="@style/button_style"
-            android:layout_width="@dimen/_180sdp"
+            android:layout_width="@dimen/_190sdp"
             android:layout_height="@dimen/_55sdp"
-            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/large_margin"
             android:text="@string/sign_up"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

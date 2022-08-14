@@ -18,7 +18,7 @@
             style="@style/text_view_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/large_margin"
             android:text="@string/instructions_header"
             android:textAlignment="center"
             android:textColor="@color/purple"
@@ -34,21 +34,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_25sdp"
-            android:textSize="@dimen/_18ssp"
             android:padding="@dimen/small_padding"
             android:text="@string/first_instruction"
             app:layout_constraintTop_toBottomOf="@id/instructions_header" />
-
         <TextView
             android:id="@+id/second_instruction"
             style="@style/text_view_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginTop="@dimen/_25sdp"
             android:padding="@dimen/small_padding"
-            android:textSize="@dimen/_18ssp"
             android:text="@string/second_instruction"
             app:layout_constraintTop_toBottomOf="@id/first_instruction" />
+
+        <TextView
+            android:id="@+id/third_instruction"
+            style="@style/text_view_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:padding="@dimen/small_padding"
+            android:text="@string/third_instruction"
+            app:layout_constraintTop_toBottomOf="@id/second_instruction" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_next"

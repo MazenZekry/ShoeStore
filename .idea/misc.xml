@@ -6,6 +6,7 @@
         <entry key="..\:/FWD Android/ShoeStore/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/FWD Android/ShoeStore/app/src/main/res/layout/fragment_login.xml" value="0.25025641025641027" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FWD/ShoeStore/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1595" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FWD/ShoeStore/app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.1595" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FWD/ShoeStore/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FWD/ShoeStore/app/src/main/res/layout/fragment_details.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FWD/ShoeStore/app/src/main/res/layout/fragment_instructions.xml" value="0.25416666666666665" />
@@ -14,6 +15,8 @@
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FWD/ShoeStore/app/src/main/res/layout/fragment_shoe_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FWD/ShoeStore/app/src/main/res/layout/fragment_welcome.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FWD/ShoeStore/app/src/main/res/layout/shoe_item_list.xml" value="0.190625" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FWD/ShoeStore/app/src/main/res/menu/logout_menu.xml" value="0.253125" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FWD/ShoeStore/app/src/main/res/menu/menu.xml" value="0.4697265625" />
       </map>
     </option>
   </component>

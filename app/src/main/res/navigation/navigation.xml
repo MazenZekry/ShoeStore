@@ -17,7 +17,7 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.mazen.shoestore.welcome.WelcomeFragment"
-        android:label="fragment_welcome"
+        android:label="WelcomeFragment"
         tools:layout="@layout/fragment_welcome" >
         <action
             android:id="@+id/action_welcomeFragment_to_instructionsFragment"
@@ -35,6 +35,6 @@
     <fragment
         android:id="@+id/shoeListFragment"
         android:name="com.mazen.shoestore.shoe_list.ShoeListFragment"
-        android:label="fragment_shoe_list"
+        android:label="ShoeListFragment"
         tools:layout="@layout/fragment_shoe_list" />
 </navigation>
