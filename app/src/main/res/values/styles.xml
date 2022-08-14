@@ -19,6 +19,12 @@
     <item name="android:textSize">@dimen/text_view_size</item>
     <item name="android:layout_marginStart">@dimen/small_margin</item>
 </style>
+    <style name="item_text_view">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:layout_marginStart">@dimen/small_margin</item>
+        <item name="android:layout_marginTop">@dimen/small_margin</item>
+    </style>
     <style name="button_style">
         <item name="android:backgroundTint">@color/darkturquoise</item>
         <item name="android:textSize">@dimen/_15ssp</item>

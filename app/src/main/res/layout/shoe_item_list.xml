@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+<variable
+    name="shoeItem"
+    type="com.mazen.shoestore.model.Shoe" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_shoe_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/medium_margin"
+        app:cardCornerRadius="@dimen/_6sdp"
+        app:cardElevation="@dimen/_6sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/small_padding">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name: "
+                    android:textColor="@color/black"
+                    style="@style/item_text_view" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company: "
+                    android:textColor="@color/black"
+                    style="@style/item_text_view" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Size: "
+                    android:textColor="@color/black"
+                    style="@style/item_text_view" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description: "
+                    android:textColor="@color/black"
+                    style="@style/item_text_view" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Air jordan"
+                    android:text="@{shoeItem.name}"
+                    android:paddingStart="@dimen/small_padding"
+                    android:textColor="@color/black"
+                    style="@style/item_text_view" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Test"
+                    android:text="@{shoeItem.company}"
+                    android:paddingStart="@dimen/small_margin"
+                    android:textColor="@color/black"
+                    style="@style/item_text_view" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   tools:text="42"
+                    android:text="@{Double.toString(shoeItem.size)}"
+                    android:textColor="@color/black"
+                    android:paddingStart="@dimen/small_padding"
+                    style="@style/item_text_view" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                    android:singleLine="true"
+                    android:text="@{shoeItem.description}"
+                    android:paddingStart="@dimen/small_padding"
+                    android:textColor="@color/black"
+                    style="@style/item_text_view" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
