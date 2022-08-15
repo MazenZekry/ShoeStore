@@ -4,7 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="viewModel"
+            type="com.mazen.shoestore.shoe_list.ShoeViewModel" />
     </data>
 
     <LinearLayout
@@ -34,6 +36,7 @@
             android:id="@+id/et_shoe_name"
             android:layout_width="match_parent"
             android:inputType="text"
+            android:text="@={viewModel.newShoeName}"
             android:layout_height="match_parent"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -50,6 +53,7 @@
             android:id="@+id/et_shoe_company"
             android:layout_width="match_parent"
             android:inputType="text"
+            android:text="@={viewModel.newShoeCompany}"
             android:layout_height="match_parent"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -71,6 +75,7 @@
             android:layout_width="match_parent"
             android:inputType="number"
             android:maxLength="2"
+            android:text="@{Double.toString(viewModel.newShoeSize)}"
             android:layout_height="@dimen/_55sdp"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -87,6 +92,7 @@
             android:id="@+id/et_shoe_description"
             android:layout_width="match_parent"
             android:inputType="text"
+            android:text="@={viewModel.newShoeDescription}"
             android:layout_height="match_parent"/>
         </com.google.android.material.textfield.TextInputLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
