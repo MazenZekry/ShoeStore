@@ -6,12 +6,39 @@ import androidx.lifecycle.ViewModel
 import com.mazen.shoestore.model.Shoe
 
 class ShoeViewModel : ViewModel() {
-    private val _shoeList= MutableLiveData<MutableList<Shoe>>()
-    val shoeList:LiveData<MutableList<Shoe>>
-    get()=_shoeList
+    private val _shoeList = MutableLiveData<MutableList<Shoe>>()
+    val shoeList: LiveData<MutableList<Shoe>>
+        get() = _shoeList
+    var newShoeName = ""
+    var newShoeSize = 0
+    var newShoeCompany = ""
+    var newShoeDescription = ""
 
-    private fun addShoe(name:String,company:String,size:Double,description:String){
-        val shoe=Shoe(name,size,company,description)
-        _shoeList.value!!.add(shoe)
+    init {
+        _shoeList.value = mutableListOf()
+    }
+     fun resetDetailData(){
+        newShoeName = ""
+        newShoeSize = 0
+        newShoeCompany = ""
+        newShoeDescription = ""
+    }
+    private fun validateDataExist() : Boolean{
+        if(newShoeName.isBlank()||newShoeSize.toString().isBlank()||newShoeCompany.isBlank()||newShoeDescription.isBlank()){
+            return false
+        }
+            return true
+    }
+    fun finishAddShoe(): Boolean {
+        return if (!validateDataExist()) {
+            false
+        } else{
+            addShoe (newShoeName, newShoeSize.toDouble(), newShoeCompany, newShoeDescription)
+            true
+        }
+    }
+
+    private fun addShoe(name: String, size: Double, company: String, description: String) {
+        _shoeList.value!!.add(Shoe(name, size, company, description))
     }
 }
