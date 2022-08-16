@@ -23,6 +23,7 @@ class DetailsFragment : Fragment() {
         binding = FragmentDetailsBinding.inflate(layoutInflater)
         binding.viewModel=viewModel
         viewModel.resetDetailData()
+
         binding.btnSave.setOnClickListener {
             if (viewModel.finishAddShoe()){
                 onSave()

@@ -90,7 +90,7 @@
                     android:layout_height="wrap_content"
                    tools:text="42"
                     android:id="@+id/tv_shoe_size"
-                    android:text="@{Double.toString(shoeItem.size)}"
+                    android:text="@{String.valueOf(shoeItem.size)}"
                     android:textColor="@color/black"
                     android:paddingStart="@dimen/small_padding"
                     style="@style/item_text_view" />

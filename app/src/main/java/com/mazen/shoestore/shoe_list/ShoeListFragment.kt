@@ -22,6 +22,7 @@ class ShoeListFragment : Fragment() {
     ): View? {
         binding = FragmentShoeListBinding.inflate(layoutInflater)
         binding.lifecycleOwner = this
+
         viewModel.shoeList.observe(viewLifecycleOwner) {
             for (shoe in viewModel.shoeList.value!!) {
                 addShoe(shoe)

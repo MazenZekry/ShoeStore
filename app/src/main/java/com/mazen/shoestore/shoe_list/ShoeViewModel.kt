@@ -9,8 +9,9 @@ class ShoeViewModel : ViewModel() {
     private val _shoeList = MutableLiveData<MutableList<Shoe>>()
     val shoeList: LiveData<MutableList<Shoe>>
         get() = _shoeList
+
     var newShoeName = ""
-    var newShoeSize = 0
+    var newShoeSize = ""
     var newShoeCompany = ""
     var newShoeDescription = ""
 
@@ -19,26 +20,29 @@ class ShoeViewModel : ViewModel() {
     }
      fun resetDetailData(){
         newShoeName = ""
-        newShoeSize = 0
+        newShoeSize = ""
         newShoeCompany = ""
         newShoeDescription = ""
     }
     private fun validateDataExist() : Boolean{
-        if(newShoeName.isBlank()||newShoeSize.toString().isBlank()||newShoeCompany.isBlank()||newShoeDescription.isBlank()){
+        if(newShoeName.isBlank()||newShoeSize.isBlank()||newShoeCompany.isBlank()||newShoeDescription.isBlank()){
             return false
         }
             return true
     }
+
+    private fun addShoe(name: String, size: String, company: String, description: String) {
+        _shoeList.value!!.add(Shoe(name, size.toDouble(), company, description))
+    }
+
     fun finishAddShoe(): Boolean {
         return if (!validateDataExist()) {
             false
         } else{
-            addShoe (newShoeName, newShoeSize.toDouble(), newShoeCompany, newShoeDescription)
+            addShoe (newShoeName, newShoeSize, newShoeCompany, newShoeDescription)
             true
         }
     }
 
-    private fun addShoe(name: String, size: Double, company: String, description: String) {
-        _shoeList.value!!.add(Shoe(name, size, company, description))
-    }
+
 }
