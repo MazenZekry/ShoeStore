@@ -31,7 +31,6 @@
             android:id="@+id/btn_add_shoe"
             android:layout_width="@dimen/_500sdp"
             android:layout_height="wrap_content"
-            android:clickable="true"
             app:backgroundTint="@color/purple"
             android:layout_marginEnd="@dimen/large_margin"
             android:layout_marginBottom="@dimen/large_margin"

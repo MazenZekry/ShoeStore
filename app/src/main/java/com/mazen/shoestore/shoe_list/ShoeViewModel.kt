@@ -18,29 +18,28 @@ class ShoeViewModel : ViewModel() {
     init {
         _shoeList.value = mutableListOf()
     }
-     fun resetDetailData(){
+
+    fun resetDetailData() {
         newShoeName = ""
         newShoeSize = ""
         newShoeCompany = ""
         newShoeDescription = ""
     }
-    private fun validateDataExist() : Boolean{
-        if(newShoeName.isBlank()||newShoeSize.isBlank()||newShoeCompany.isBlank()||newShoeDescription.isBlank()){
+
+    private fun allShoeDataExist(): Boolean {
+        if (newShoeName.isEmpty() || newShoeSize.isEmpty() || newShoeCompany.isEmpty() || newShoeDescription.isEmpty()) {
             return false
         }
-            return true
+        return true
     }
 
-    private fun addShoe(name: String, size: String, company: String, description: String) {
-        _shoeList.value!!.add(Shoe(name, size.toDouble(), company, description))
-    }
-
-    fun finishAddShoe(): Boolean {
-        return if (!validateDataExist()) {
-            false
-        } else{
-            addShoe (newShoeName, newShoeSize, newShoeCompany, newShoeDescription)
+    fun addShoe(): Boolean {
+        return if (allShoeDataExist()) {
+            _shoeList.value!!.add(
+                Shoe(newShoeName, newShoeSize.toDouble(), newShoeCompany, newShoeDescription))
             true
+        } else {
+            false
         }
     }
 

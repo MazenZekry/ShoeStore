@@ -72,6 +72,7 @@
                     android:id="@+id/tv_shoe_name"
                     android:text="@{shoeItem.name}"
                     android:paddingStart="@dimen/small_padding"
+                    android:paddingEnd="@dimen/small_padding"
                     android:textColor="@color/black"
                     style="@style/item_text_view" />
 
@@ -82,6 +83,7 @@
                     android:id="@+id/tv_shoe_company"
                     android:text="@{shoeItem.company}"
                     android:paddingStart="@dimen/small_margin"
+                    android:paddingEnd="@dimen/small_padding"
                     android:textColor="@color/black"
                     style="@style/item_text_view" />
 
@@ -92,7 +94,8 @@
                     android:id="@+id/tv_shoe_size"
                     android:text="@{String.valueOf(shoeItem.size)}"
                     android:textColor="@color/black"
-                    android:paddingStart="@dimen/small_padding"
+                    android:paddingStart="@dimen/small_margin"
+                    android:paddingEnd="@dimen/small_padding"
                     style="@style/item_text_view" />
 
                 <TextView
@@ -102,7 +105,8 @@
                     android:singleLine="true"
                     android:id="@+id/tv_shoe_description"
                     android:text="@{shoeItem.description}"
-                    android:paddingStart="@dimen/small_padding"
+                    android:paddingStart="@dimen/small_margin"
+                    android:paddingEnd="@dimen/small_padding"
                     android:textColor="@color/black"
                     style="@style/item_text_view" />
             </LinearLayout>

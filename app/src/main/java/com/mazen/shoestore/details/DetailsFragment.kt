@@ -19,30 +19,27 @@ class DetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentDetailsBinding.inflate(layoutInflater)
         binding.viewModel=viewModel
         viewModel.resetDetailData()
 
         binding.btnSave.setOnClickListener {
-            if (viewModel.finishAddShoe()){
-                onSave()
+            if (viewModel.addShoe()){
+                goToShoeListFragment()
             }
             else{
                 Toast.makeText(activity,"Please fill all shoe data",Toast.LENGTH_SHORT).show()
             }
         }
         binding.btnCancel.setOnClickListener {
-            onCancel()
+            goToShoeListFragment()
         }
         return binding.root
     }
 
-    private fun onSave() {
-                findNavController().navigate(DetailsFragmentDirections.actionDetailsFragmentToShoeListFragment())
-    }
-    private fun onCancel() {
-        findNavController().navigate(R.id.action_detailsFragment_to_shoeListFragment)
+    private fun goToShoeListFragment() {
+                findNavController().navigate(R.id.action_detailsFragment_to_shoeListFragment)
     }
 
 }
