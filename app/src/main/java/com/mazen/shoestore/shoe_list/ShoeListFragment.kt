@@ -13,7 +13,7 @@ import com.mazen.shoestore.databinding.FragmentShoeListBinding
 import com.mazen.shoestore.databinding.ShoeItemListBinding
 import com.mazen.shoestore.model.Shoe
 
-class ShoeListFragment : Fragment(), MenuProvider{
+class ShoeListFragment : Fragment() {
     lateinit var binding: FragmentShoeListBinding
     private val viewModel: ShoeViewModel by activityViewModels()
     override fun onCreateView(
@@ -31,13 +31,26 @@ class ShoeListFragment : Fragment(), MenuProvider{
         binding.btnAddShoe.setOnClickListener {
             addNewShoeDetails()
         }
-
-        val menuHost: MenuHost = requireActivity()
-        menuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
+        setHasOptionsMenu(true)
         return binding.root
     }
+
     private fun addNewShoeDetails() {
         findNavController().navigate(R.id.action_shoeListFragment_to_detailsFragment)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.logout_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.loginFragment -> {
+                findNavController().navigate(R.id.action_shoeListFragment_to_loginFragment)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun addShoe(shoe: Shoe) {
@@ -45,19 +58,5 @@ class ShoeListFragment : Fragment(), MenuProvider{
         shoeItemBinding.shoeItem = shoe
         binding.innerLayout.addView(shoeItemBinding.root)
 
-    }
-
-    override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-        menuInflater.inflate(R.menu.logout_menu, menu)
-    }
-
-    override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-        return when (menuItem.itemId) {
-            R.id.loginFragment -> {
-                findNavController().navigate(R.id.loginFragment)
-                true
-            }
-            else -> false
-        }
     }
 }

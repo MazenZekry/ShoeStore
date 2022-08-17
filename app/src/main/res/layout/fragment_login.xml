@@ -9,7 +9,7 @@
             name="user"
             type="com.mazen.shoestore.model.User" />
     </data>
-
+<!--ConstraintLayout can create large and complex layouts with no nested view groups-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

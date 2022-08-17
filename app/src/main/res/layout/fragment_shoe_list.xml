@@ -6,17 +6,18 @@
     <data>
 
     </data>
+    <!--ConstraintLayout can create large and complex layouts with no nested view groups-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".shoe_list.ShoeListFragment">
-
+<!--ScrollView to scroll up and down in the page-->
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
+<!--Linearlayout used here to display the shoe lists vertically -->
             <LinearLayout
                 android:id="@+id/inner_layout"
                 android:layout_width="match_parent"

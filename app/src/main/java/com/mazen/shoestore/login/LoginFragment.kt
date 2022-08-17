@@ -18,16 +18,19 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentLoginBinding.inflate(layoutInflater)
-        binding.btnSignIn.setOnClickListener { view: View ->
-            if (validate()) {
-                view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+        with(binding) {
+            btnSignIn.setOnClickListener { view: View ->
+                if (validate()) {
+                    view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+                }
+            }
+            btnSignUp.setOnClickListener { view: View ->
+                if (validate()) {
+                    view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+                }
             }
         }
-        binding.btnSignUp.setOnClickListener { view: View ->
-            if (validate()) {
-                view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
-            }
-        }
+
         setHasOptionsMenu(true)
         return binding.root
     }
@@ -37,16 +40,19 @@ class LoginFragment : Fragment() {
     }
 
     private fun validate(): Boolean {
-        if (binding.etLoginEmail.text.toString().isEmpty()) {
-            binding.etLoginEmail.error = "Please enter your email"
-            binding.etLoginEmail.requestFocus()
-            return false
-        } else if (binding.etLoginPassword.text.toString().isEmpty()) {
-            binding.etLoginPassword.setError("Please enter your password",null)
-            binding.etLoginPassword.requestFocus()
-            return false
+        with(binding) {
+            if (etLoginEmail.text.toString().isEmpty()) {
+                etLoginEmail.error = "Please enter your email"
+                etLoginEmail.requestFocus()
+                return false
+            } else if (etLoginPassword.text.toString().isEmpty()) {
+                etLoginPassword.setError("Please enter your password", null)
+                etLoginPassword.requestFocus()
+                return false
+            }
+            return true
         }
-        return true
+
 
     }
 }
